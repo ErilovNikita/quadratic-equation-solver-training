@@ -1,1 +1,65 @@
-# quadratic-equation-solver-training
+# Quadratic Equation Solver (TDD, Python)
+
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+![Python Version from PEP 621 TOML](https://img.shields.io/python/required-version-toml?tomlFilePath=https%3A%2F%2Fraw.githubusercontent.com%2FErilovNikita%2Fquadratic-equation-solver-training%2Frefs%2Fheads%2Fdev%2Fpyproject.toml)
+
+
+Проект реализует функцию решения квадратного уравнения и покрывает её модульными тестами, демонстрируя поэтапный подход TDD и соответствие требованиям Time To Market.
+
+Формат уравнения:
+```math
+ax² + bx + c = 0
+```
+
+## 🎯 Цели проекта
+- Освоить практику TDD
+- Написать модульные тесты на PyTest
+- Настроить CI для автоматического прогона тестов
+- Корректно работать с типом `float` и пограничными случаями
+
+## 🧠 Функциональные требования
+
+Реализуется функция:
+```python
+solve(a: float, b: float, c: float) -> list[float]
+```
+
+Поведение функции:
+- Возвращает список корней квадратного уравнения
+- Возвращает пустой список, если действительных корней нет
+- Возвращает два корня, если дискриминант положительный
+- Возвращает один корень кратности 2, если дискриминант близок к 0 (через `epsilon`)
+- Выбрасывает исключение, если:
+  - `a` близко к 0
+  - коэффициенты содержат `NaN`, `+inf`, `-inf`
+
+## 🧪 Тестовые сценарии
+
+Проект покрывает следующие кейсы:
+1. Нет корней<br>
+    Уравнение: x² + 1 = 0
+
+1. Два корня<br>
+    Уравнение: x² - 1 = 0 → x = 1, x = -1
+1. Один корень кратности 2 (через `epsilon`)<br>
+    Дискриминант не равен 0 напрямую, но меньше заданного epsilon
+1. Некорректный коэффициент `a`<br>
+    `a ≈ 0` → выбрасывается исключение
+1. Специальные значения `float`<br>
+    `NaN`, `+inf`, `-inf` для любых коэффициентов → исключение
+
+## ⚙️ Технологический стек
+- Python 3.10+
+- pytest — модульные тесты
+- GitHub — контроль версий
+- GitHub Actions — автоматический прогон тестов
+
+## 🚀 Запуск проекта локально
+``` sh
+git clone https://github.com/ErilovNikita/quadratic-equation-solver-training.git
+cd quadratic-equation-solver-training
+python -m venv venv
+source venv/bin/activate
+pip install .
+pytest -v -s
+```
