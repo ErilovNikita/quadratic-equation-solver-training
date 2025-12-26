@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quadratic-equation-solver-training"
+version = "0.1.0"
+description = "Quadratic equation solver implemented with TDD principles and CI integration"
+readme = "README.md"
+requires-python = ">=3.13"
+license = { text = "MIT" }
+
+authors = [
+    { name = "Nikita Erilov" }
+]
+
+dependencies = [
+    "pytest==9.0.2",
+    "iniconfig==2.3.0",
+    "packaging==25.0",
+    "pluggy==1.6.0",
+    "Pygments==2.19.2"
+]
+
+[tool.pytest.ini_options]
+minversion = "9.0.2"
+addopts = "-ra -q"
+testpaths = ["tests"]
