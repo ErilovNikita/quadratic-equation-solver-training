@@ -54,10 +54,10 @@ solve(a: float, b: float, c: float) -> list[float]
 
 ## 🚀 Запуск проекта локально
 ``` sh
-git clone <repo_url>
-cd quadratic-solver
+git clone https://github.com/ErilovNikita/quadratic-equation-solver-training.git
+cd quadratic-equation-solver-training
 python -m venv venv
 source venv/bin/activate
-pip install -r requirements.txt
-pytest
+pip install .
+pytest -v -s
 ```
