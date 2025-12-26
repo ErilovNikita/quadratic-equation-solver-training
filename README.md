@@ -1,6 +1,8 @@
 # Quadratic Equation Solver (TDD, Python)
 
-Данный проект — домашнее задание по курсу **"Архитектура и шаблоны проектирования"**.
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+![Python Version from PEP 621 TOML](https://img.shields.io/python/required-version-toml?tomlFilePath=https%3A%2F%2Fraw.githubusercontent.com%2FErilovNikita%2Fquadratic-equation-solver-training%2Frefs%2Fheads%2Fdev%2Fpyproject.toml)
+
 
 Проект реализует функцию решения квадратного уравнения и покрывает её модульными тестами, демонстрируя поэтапный подход TDD и соответствие требованиям Time To Market.
 
